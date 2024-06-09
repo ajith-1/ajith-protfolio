@@ -1,0 +1,29 @@
+.list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+}
+
+.listName {
+    margin: 0 10px;
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 3px;
+    cursor: pointer;
+}
+
+.listName:hover {
+    border-bottom: 3px solid #ad241b;
+}
+
+.menuIcon{
+    display:none;
+    color: aliceblue;
+  }
+  
+  @media screen and (max-width:1155px) {
+    .menuIcon{
+      display:block;
+    }
+  }
