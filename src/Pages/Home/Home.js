@@ -4,15 +4,11 @@ import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
 import lottie from "lottie-web";
-import profile from "../profile-logo.json";
+
 
 function Home() {
 
-  React.useEffect(() => {
-    lottie.loadAnimation({
-      container: document.querySelector("#profile-logo"),
-    });
-  }, []);
+ 
 
   return (
     <>
@@ -30,7 +26,7 @@ function Home() {
           </Grid>
           <Grid item xs={12} sm={12} md={6} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <Box data-aos="fade-left" data-aos-duration='1000'>
-              <Box id='profile-logo'/>
+              <img src='/images/pic.png' width='250px' height='250px'/>
             </Box>
           </Grid>
         </Grid>
