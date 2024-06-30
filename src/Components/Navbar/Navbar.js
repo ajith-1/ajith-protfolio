@@ -2,7 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -45,18 +45,22 @@ function Navbar() {
     <>
       <AppBar position="fixed" width='100%' sx={{bgColor:'transparent'}}>
         <Toolbar sx={{display:'flex',alignItems:'center',justifyContent:'space-around'}}>
-
+          <Box>
           {menuItems.map((item)=>{
    
-          return(
-            <Link
-            to={item.path}
-            key={item.title}
-            >
-            <span>{item.title}</span>
-            </Link>
-          )
-          })}
+   return(
+    <NavLink
+    to={item.path}
+    className={({ isActive, isPending }) =>
+    isPending ? "pending" : isActive ? "active" : ""
+  }
+    >
+{item.text}
+
+    </NavLink>
+   )
+   })}
+          </Box>
          
         </Toolbar>
       </AppBar>

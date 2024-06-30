@@ -16,6 +16,9 @@
 .listName:hover {
     border-bottom: 3px solid #ad241b;
 }
+.active{
+  color:darkgoldenrod
+}
 
 .menuIcon{
     display:none;

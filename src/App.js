@@ -1,5 +1,5 @@
 import './App.css';
-import Route from '../src/Route/Route';
+import Layout from '../src/Pages/Layout/Layout';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 AOS.init();
@@ -8,7 +8,7 @@ AOS.init();
 function App() {
   return (
    <>
-  
+  <Layout/>
    </>
   );
 }

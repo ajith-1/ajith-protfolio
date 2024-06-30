@@ -1,9 +1,8 @@
-import React,{useEffect} from 'react';
+import React from 'react';
 import Typography from '@mui/material/Typography';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 import Box from '@mui/material/Box';
-import lottie from "lottie-web";
 
 
 function Home() {
