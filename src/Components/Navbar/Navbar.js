@@ -2,6 +2,7 @@ import React from 'react';
 import './Navbar.css';
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
+import {Link} from 'react-router-dom';
 import IconButton from '@mui/material/IconButton';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
@@ -29,16 +30,8 @@ import { styled} from '@mui/material/styles';
 function Navbar() {
 
   const isMobile = useMediaQuery('(max-width:1155px)');
-  const [openDrawer, setOpenDrawer] = React.useState(false);
+//  const [openDrawer, setOpenDrawer] = React.useState(false);
 
-
-  const handleDrawerOpen = () => {
-    setOpenDrawer(true);
-  };
-
-  // const handleDrawerClose = () => {
-  //   setOpenDrawer(false);
-  // };
 
   const menuItems = [
     { text: 'Home', path: '/' },
@@ -52,36 +45,19 @@ function Navbar() {
     <>
       <AppBar position="fixed" width='100%' sx={{bgColor:'transparent'}}>
         <Toolbar sx={{display:'flex',alignItems:'center',justifyContent:'space-around'}}>
-          <Box>
-            <Typography>Ajith Kumar</Typography>
-          </Box>
-          <Box>
-          {isMobile ? (
-            <IconButton
-              aria-label="open drawer"
-              edge="end"
-              onClick={handleDrawerOpen}
-              sx={{ mr: 2 }}
-              className='menuIcon'
+
+          {menuItems.map((item)=>{
+   
+          return(
+            <Link
+            to={item.path}
+            key={item.title}
             >
-              <MenuIcon sx={{ fontSize: '30px', color:'red' }} />
-            </IconButton>
-          ) : (
-            <>
-              <ul className='list'>
-                {menuItems.map((item, index) => (
-                  <li
-                    key={index}
-                    // onClick={() => navigate(item.path)}
-                    className={'listName'}
-                  >
-                    {item.text}
-                  </li>
-                ))}
-              </ul>
-              </>
-          )}
-          </Box>
+            <span>{item.title}</span>
+            </Link>
+          )
+          })}
+         
         </Toolbar>
       </AppBar>
 

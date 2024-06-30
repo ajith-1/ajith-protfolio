@@ -8,7 +8,7 @@ AOS.init();
 function App() {
   return (
    <>
-   <Route/>
+  
    </>
   );
 }
