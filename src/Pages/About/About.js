@@ -6,7 +6,7 @@ import Container from '@mui/material/Container';
 function About() {
   return (
     <>
-      <Container sx={{display:'flex',alignItems:'cener',justifyContent:'center',height:'100vh',flexDirection:'column'}}>
+      <Container id='about' sx={{display:'flex',alignItems:'cener',justifyContent:'center',height:'100vh',flexDirection:'column'}}>
         <Typography variant='h2' textAlign={'center'} data-aos="fade-up" data-aos-duration='800'>About Me</Typography> 
         <Typography variant='h5' textAlign={'center'} mt={6} data-aos="fade-up" data-aos-duration='1000'>Hi, I'm Ajith Kumar, a passionate front-end developer based in Bangalore.
           I enjoy creating responsive and user-friendly web applications.
@@ -17,6 +17,6 @@ function About() {
       </Container>
     </>
   )
-}
+} 
 
 export default About

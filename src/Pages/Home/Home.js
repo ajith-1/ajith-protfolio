@@ -7,11 +7,9 @@ import Box from '@mui/material/Box';
 
 function Home() {
 
- 
-
   return (
     <>
-     <Container sx={{display:'flex',alignItems:'cener',justifyContent:'center',height:'100vh'}}>
+     <Container id='home' sx={{display:'flex',alignItems:'cener',justifyContent:'center',height:'100vh'}}>
 
         {/*--------------------hero section------------------ */}
 

@@ -7,17 +7,20 @@
 
 .listName {
     margin: 0 10px;
-    font-size: 18px;
-    font-weight: 600;
-    padding-bottom: 3px;
+    font-size: 15px;
+    padding: 0 5px;
     cursor: pointer;
 }
 
 .listName:hover {
-    border-bottom: 3px solid #ad241b;
+   background-color: black;
+   color: #ffff;
+   border-radius: 10px;
 }
 .active{
-  color:darkgoldenrod
+  background-color: black;
+   color: #ffff;
+   border-radius: 10px;
 }
 
 .menuIcon{
