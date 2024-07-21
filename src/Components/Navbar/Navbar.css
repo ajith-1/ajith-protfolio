@@ -27,6 +27,31 @@
     display:none;
     color: #0000;
   }
+
+  .activeList{
+    color:#1A9E75;
+    margin-left:20px;
+    font-size: 20px;
+    font-weight: 800;
+    cursor: pointer;
+    border-left: 4px solid #1A9E75;
+    padding-left: 15px;
+  
+  }
+  .drawerList{
+    font-size: 20px;
+    margin-left: 10px;
+    font-weight: 800;
+    cursor: pointer;
+    transition: all 0.3s;
+    padding-left: 15px;
+  
+  }
+  .drawerList:hover{
+    color:#1A9E75;
+    margin-left:20px; 
+    padding-left: 15px;
+  }
   
   @media screen and (max-width:1155px) {
     .menuIcon{
