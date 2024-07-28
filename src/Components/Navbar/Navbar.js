@@ -5,7 +5,7 @@ import Toolbar from '@mui/material/Toolbar';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import useMediaQuery from '@mui/material/useMediaQuery';
-import { Link, animateScroll as scroll, scrollSpy } from 'react-scroll';
+import { Link, animateScroll as scroll, spy } from 'react-scroll';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
@@ -67,10 +67,10 @@ function Navbar() {
                 return (
                   <Link
                     to={item.path}
-                    duration={1500}
+                    duration={1300}
                     className='listName'
                     activeClass="active"
-                    scrollSpy={true}
+                    spy={true}
                     smooth={true}
                     offset={50}
                   >
@@ -85,12 +85,13 @@ function Navbar() {
         </Toolbar>
       </AppBar>
 
-      <Drawer anchor="left" width='100%' open={openDrawer} onClose={handleDrawerClose} >
+      <Drawer anchor="left" open={openDrawer} onClose={handleDrawerClose} >
+        <Box sx={{width:'100%'}}>
         <DrawerHeader>
           <IconButton color="inherit"
             aria-label="close drawer"
             onClick={handleDrawerClose}>
-            <CloseIcon sx={{ fontSize: '30px', }} />
+            <CloseIcon sx={{ fontSize: '30px',}} />
           </IconButton>
         </DrawerHeader>
         {menuItems.map((item) => {
@@ -101,7 +102,7 @@ function Navbar() {
               duration={1500}
               className='drawerList'
               activeClass="activeList"
-              scrollSpy={true}
+              spy={true}
               smooth={true}
               offset={50}
               onClick={() => { setOpenDrawer(false); }}
@@ -111,6 +112,7 @@ function Navbar() {
             </Link>
           )
         })}
+        </Box>
       </Drawer>
 
     </>

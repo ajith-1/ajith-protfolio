@@ -1,0 +1,19 @@
+.heroimg{
+    width: 250px;
+    height: 250px;
+    animation: bounce 5s infinite;
+}
+
+@keyframes bounce{
+
+    0%{
+        transform: translateY(0);
+      }
+      50%{
+        transform: translateY(-20px);
+      }
+      100%{
+        transform: translateY(0);
+      }
+
+}
